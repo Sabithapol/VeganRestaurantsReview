@@ -1,4 +1,5 @@
 class Api::V1::RestaurantsController < ApplicationController
+    protect_from_forgery with: :null_session
     def index
         restaurants = Restaurant.all 
 
