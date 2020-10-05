@@ -1,6 +1,36 @@
 import React,{useState, useEffect, Fragment} from 'react'
 import axios from 'axios'
 import Restaurant from './Restaurant'
+import styled from 'styled-components'
+
+const Home = styled.div`
+text-align: center;
+max-width: 2100px;
+margin-left: auto;
+margin-right: auto;
+`
+
+const Header= styled.div`
+padding: 100px 100px 10px 100px;
+
+h1{
+    font-size: 42px;
+}
+`
+
+const Subheader = styled.div`
+font-weight: 300;
+font-size: 26px;
+`
+
+const Grid = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+width: 100%;
+padding: 20px;
+`
+
 
 const Restaurants = () => {
     const[restaurants, setRestaurants] = useState([])
@@ -23,15 +53,15 @@ const Restaurants = () => {
     })
 
     return(
-    <div className="home">
-    <div className="header">
+    <Home>
+    <Header>
         <h1>Vegan Restaurant Reviews</h1>
-        <div className="subheader">Honest, unbiased reviews for almost all the Vegan restaurants in Vancouver</div>
-    </div>
-    <div className="grid">
-    {grid}
-    </div>
-    </div>
+        <Subheader>Honest, unbiased reviews for almost all the Vegan restaurants in Vancouver</Subheader>
+    </Header>
+    <Grid>
+        {grid}
+    </Grid>
+    </Home>
     )
 }
 export default Restaurants
