@@ -8,41 +8,53 @@
 restaurants = Restaurant.create([
   { 
     name: "Chickpea",
-    image_url: "https://unsplash.com/photos/sEuvlgAqsUA"
+    image_url: '/photo-1.jpeg'
   }, 
   { 
     name: "Sula",
-    image_url: "https://unsplash.com/photos/Djtc1T38-GY"
+    image_url: '/photo-2.jpeg'
   },
   { 
     name: "Acorn",
-    image_url: "https://unsplash.com/photos/uG6IchOznWw" 
+    image_url: '/photo-3.jpeg'
   }, 
   { 
     name: "Arbor",
-    image_url: "https://unsplash.com/photos/fMYQyLvtpiU" 
+    image_url: '/photo-4.jpeg'
   }, 
   { 
     name: "Grano pizza",
-    image_url: "https://unsplash.com/photos/MPMH77_XtBY" 
+    image_url: '/photo-5.jpeg'
   }, 
   { 
-    name: "umaluma cafe",
-    image_url: "https://unsplash.com/photos/wrd6RfjvMjY" 
+    name: "Umaluma cafe",
+    image_url: '/photo-6.jpeg'
   },
  { 
-    name: "to die for cafe",
-    image_url: "https://unsplash.com/photos/H2avC2mh66Q" 
+    name: "Todiefor cafe",
+    image_url: '/photo-7.jpeg'
  },
  {
-    name: "say hello sweets",
-    image_url: "https://unsplash.com/photos/AKRaaxG9QIo"
+    name: "Say hello sweets",
+    image_url: '/photo-8.jpeg'
  },
  {
-    name: "oh sooo good",
-    image_url: "https://unsplash.com/photos/3m575c3wgvw" 
- }
- ])
+    name: "Oh sooo good",
+    image_url: '/photo-9.jpeg'
+ },
+{
+    name: "Oh sweet day",
+    image_url: '/photo-10.jpeg'
+},
+{
+    name: "meet on main",
+    image_url: '/photo-11.jpeg'
+},
+{
+    name: "planetary burger",
+    image_url: '/photo-12.jpeg'
+  }
+])
 
  reviews = Review.create([
     {
