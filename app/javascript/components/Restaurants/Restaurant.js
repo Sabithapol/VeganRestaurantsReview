@@ -3,14 +3,20 @@ import {BrowserRouter as Router, Link} from 'react-router-dom'
 import styled from 'styled-components'
 
 const Card = styled.div`
-    // border: 0.5px;
+    border: 1px groove #efefef;
     background: #fff;
+    text-align: center;
 `
 const RestaurantLogo = styled.div`
     width: 50px;
-    img{
-        height: 350px;
-        width: 350px;
+    text-align: center;
+    // margin-left: auto;
+    // margin-right: auto;
+    img {
+        height: 150px;  //else change to 50 both height width 
+        width: 150px;
+        border: 1px solid #efefef;
+        border-radius: 100%;
     }
 `
 const RestaurantName = styled.div`
@@ -38,9 +44,7 @@ const Restaurant = (props) => {
         </RestaurantLogo>
        <RestaurantName> {props.attributes.name}</RestaurantName>
         <div className="restaurant-score">{props.attributes.avg_score}</div>
-        <div className="restaurant-link">
-        <Link to ={'/restaurants/${props.attributes.slug}'}>View Restaurant</Link>
-        </div>
+        <LinkWrapper><Link to ={'/restaurants/${props.attributes.slug}'}>View Restaurant</Link></LinkWrapper>
         </Card>
     )
 }

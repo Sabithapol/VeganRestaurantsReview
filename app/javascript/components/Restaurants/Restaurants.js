@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Home = styled.div`
 text-align: center;
-max-width: 2100px;
+max-width: 1200px;
 margin-left: auto;
 margin-right: auto;
 `
@@ -25,10 +25,10 @@ font-size: 26px;
 
 const Grid = styled.div`
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-gap: 10px;
-width: 80%;
-padding: 10px;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 20px;
+width: 100%;
+padding: 20px;
 `
 
 
