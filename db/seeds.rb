@@ -8,51 +8,51 @@
 restaurants = Restaurant.create([
   { 
     name: "Chickpea",
-    image_url: '/photo-1.jpeg'
+    image_url: '/chickpea.jpeg'
   }, 
   { 
     name: "Sula",
-    image_url: '/photo-2.jpeg'
+    image_url: '/sula.jpeg'
   },
   { 
     name: "Acorn",
-    image_url: '/photo-3.jpeg'
+    image_url: '/Acorn.jpeg'
   }, 
   { 
     name: "Arbor",
-    image_url: '/photo-4.jpeg'
+    image_url: '/arbor.jpeg'
   }, 
   { 
-    name: "Grano pizza",
-    image_url: '/photo-5.jpeg'
+    name: "Grano Pizza",
+    image_url: '/grano.jpeg'
   }, 
   { 
     name: "Umaluma cafe",
-    image_url: '/photo-6.jpeg'
+    image_url: '/umaluma.jpeg'
   },
  { 
     name: "Todiefor cafe",
-    image_url: '/photo-7.jpeg'
+    image_url: '/todiefor.jpeg'
  },
  {
     name: "Say hello sweets",
-    image_url: '/photo-8.jpeg'
+    image_url: '/sayhello.jpeg'
  },
  {
     name: "Oh sooo good",
-    image_url: '/photo-9.jpeg'
+    image_url: '/ohsoogood.jpeg'
  },
 {
     name: "Oh sweet day",
-    image_url: '/photo-10.jpeg'
+    image_url: '/ohsweetday.jpeg'
 },
 {
     name: "meet on main",
-    image_url: '/photo-11.jpeg'
+    image_url: '/meetonmain.jpeg'
 },
 {
     name: "planetary burger",
-    image_url: '/photo-12.jpeg'
+    image_url: '/planetary.jpeg'
   }
 ])
 

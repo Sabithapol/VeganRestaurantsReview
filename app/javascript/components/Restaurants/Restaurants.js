@@ -26,9 +26,9 @@ font-size: 26px;
 const Grid = styled.div`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-gap: 20px;
-width: 100%;
-padding: 20px;
+grid-gap: 10px;
+width: 80%;
+padding: 10px;
 `
 
 
