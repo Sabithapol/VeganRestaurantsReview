@@ -13,7 +13,7 @@ const RestaurantLogo = styled.div`
     // margin-left: auto;
     // margin-right: auto;
     img {
-        height: 150px;  //else change to 50 both height width 
+        height: 150px;  //else change to 50 both height width
         width: 150px;
         border: 1px solid #efefef;
         border-radius: 100%;
@@ -40,11 +40,13 @@ const Restaurant = (props) => {
     return (
         <Card>
         <RestaurantLogo>
-        <img src={props.attributes.image_url} alt={props.attributes.name}/>
+        <img src={props.attributes.image_url} alt={props.name}/>
         </RestaurantLogo>
        <RestaurantName> {props.attributes.name}</RestaurantName>
         <div className="restaurant-score">{props.attributes.avg_score}</div>
-        <LinkWrapper><Link to ={'/restaurants/${props.attributes.slug}'}>View Restaurant</Link></LinkWrapper>
+        <LinkWrapper>
+        <Link to ={"/restaurants/"+ props.attributes.slug}>View Restaurant</Link>
+        </LinkWrapper>
         </Card>
     )
 }
