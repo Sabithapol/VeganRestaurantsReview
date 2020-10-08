@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Link} from 'react-router-dom'
 import styled from 'styled-components'
+import Rating from '../Rating/Rating'
 
 const Card = styled.div`
     border: 1px groove #efefef;
@@ -39,14 +40,14 @@ const LinkWrapper = styled.div`
 const Restaurant = (props) => {
     return (
         <Card>
-        <RestaurantLogo>
-        <img src={props.attributes.image_url} alt={props.name}/>
-        </RestaurantLogo>
-       <RestaurantName> {props.attributes.name}</RestaurantName>
-        <div className="restaurant-score">{props.attributes.avg_score}</div>
-        <LinkWrapper>
-        <Link to ={"/restaurants/"+ props.attributes.slug}>View Restaurant</Link>
-        </LinkWrapper>
+            <RestaurantLogo>
+                <img src={props.attributes.image_url} alt={props.name}/>
+            </RestaurantLogo>
+            <RestaurantName> {props.attributes.name}</RestaurantName>
+            <Rating score={props.attributes.avg_score}/>
+            <LinkWrapper>
+                <Link to ={"/restaurants/"+ props.attributes.slug}>View Restaurant</Link>
+            </LinkWrapper>
         </Card>
     )
 }

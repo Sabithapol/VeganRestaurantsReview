@@ -2,6 +2,7 @@ import React, {useState, useEffect, Fragment} from 'react'
 import axios from 'axios'
 import Header from './Header'
 import ReviewForm from './ReviewForm'
+import Review from'./Review'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
@@ -58,7 +59,7 @@ const Restaurant = (props) => {
         const restaurant_id = restaurant.data.id
         axios.post('/api/v1/reviews', {review, restaurant_id})
         .then(resp => {
-           const included = [...restaurant.included, resp.data]
+           const included = [...restaurant.included, resp.data.data]
            setRestaurant({...restaurant, included})
            setReview({title: "", description: "", score: 0})
         })
@@ -69,6 +70,18 @@ const Restaurant = (props) => {
         e.preventDefault()
         
         setReview({...review, score})
+    }
+
+    let reviews
+    if (loaded && restaurant.included) {
+        reviews = restaurant.included.map((item, index) => {
+         return(
+            <Review 
+                key={index}
+                attributes={item.attributes}
+            />
+         )
+       })
     }
 
     return (
@@ -82,7 +95,7 @@ const Restaurant = (props) => {
                     attributes={restaurant.data.attributes}
                     reviews = {restaurant.included}
                     />
-                 <div className="reviews"></div>
+                 {reviews}
                  </Main>
             </Column>
         <Column>
