@@ -13,7 +13,7 @@ const RatingContainer = styled.div`
     flex-direction: row;
 `
 const Title = styled.div`
-    padding: 20px 0px 0px 0px;
+    padding: 20px 0 0 0;
     font-size: 18px;
 `
 const Description = styled.div`

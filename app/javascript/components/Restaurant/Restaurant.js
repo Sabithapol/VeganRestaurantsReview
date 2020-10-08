@@ -56,19 +56,18 @@ const Restaurant = (props) => {
         const csrfToken = document.querySelector('[name=csrf-token').content
         axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
 
-        const restaurant_id = restaurant.data.id
+        const restaurant_id = parseInt(restaurant.data.id)
         axios.post('/api/v1/reviews', {review, restaurant_id})
         .then(resp => {
            const included = [...restaurant.included, resp.data.data]
            setRestaurant({...restaurant, included})
-           setReview({title: "", description: "", score: 0})
+           setReview({title: ' ', description: ' ', score: 0})
         })
         .catch(resp => {})
     }
 
     const setRating= (score, e) => {
         e.preventDefault()
-        
         setReview({...review, score})
     }
 
