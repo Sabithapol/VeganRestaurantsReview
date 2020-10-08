@@ -7,19 +7,19 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 restaurants = Restaurant.create([
   { 
-    name: "Chickpea",
+    name: "Chickpea Restaurant",
     image_url: '/chickpea.jpeg'
   }, 
   { 
-    name: "Sula",
+    name: "Sula Indian Restaurant",
     image_url: '/sula.jpeg'
   },
   { 
-    name: "Acorn",
+    name: "Acorn Restaurant",
     image_url: '/Acorn.jpeg'
   }, 
   { 
-    name: "Arbor",
+    name: "Arbor Restaurant",
     image_url: '/arbor.jpeg'
   }, 
   { 
