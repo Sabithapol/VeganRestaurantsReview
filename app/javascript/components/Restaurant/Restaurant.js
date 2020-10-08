@@ -62,8 +62,13 @@ const Restaurant = (props) => {
            setRestaurant({...restaurant, included})
            setReview({title: "", description: "", score: 0})
         })
-
         .catch(resp => {})
+    }
+
+    const setRating= (score, e) => {
+        e.preventDefault()
+        
+        setReview({...review, score})
     }
 
     return (
@@ -84,6 +89,7 @@ const Restaurant = (props) => {
                 <ReviewForm
                 handleChange={handleChange}
                 handleSubmit={handleSubmit}
+                setRating={setRating}
                 attributes={restaurant.data.attributes}
                 review={review}
                 />
